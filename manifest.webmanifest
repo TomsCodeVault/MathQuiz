@@ -1,0 +1,22 @@
+{
+  "short_name": "Times Tables",
+  "name": "Learn Your Times Tables",
+  "description": "Simple times table app to help children learn their times tables",
+  "icons": [
+    {
+      "src": "https://cdn.glitch.com/8402eb85-eac1-4cf9-a14f-cfa621f28395%2Ficon-192.png?v=1609534983902",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://cdn.glitch.com/8402eb85-eac1-4cf9-a14f-cfa621f28395%2Ficon-512.png?v=1609534986320",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#7d017d",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#7d017d"
+}

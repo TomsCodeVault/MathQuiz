@@ -1,0 +1,140 @@
+<html lang="en" style="height:100%;">
+	<head>
+		<title>Times Tables</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- <link rel="apple-touch-icon" sizes="57x57" href="images/touch-icon-iphone.png"> -->
+		<!-- <link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png"> -->
+		<link rel="apple-touch-icon" sizes="120x120" href="images/tt-icon-120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/tt-icon-152.png">
+		<!-- <link rel="apple-touch-icon" sizes="167x167" href="images/touch-icon-ipad-pro.png"> -->
+		<link rel="apple-touch-icon" sizes="180x180" href="images/tt-icon-180.png">
+		<script type="text/javascript" src="times-tables.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="manifest" href="manifest.webmanifest">
+	</head>
+	<body>
+		<div class="modal hidden" id="confirmation">
+			<div class="confirmDialog">
+				<div class="confirmMsg">
+					Are you sure you want to clear the statistics?
+				</div>
+				<div class=btnGrp>
+					<div id="clearYes">Yes</div>
+					<div id="clearNo">No</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal hidden" id="stats">
+			<div class="statsContainer">
+				<div id="back">&lt;-- back</div>
+				<div id="clearStats">Clear Stats</div>
+				<table id="statistics">
+					<caption>Results Since: </caption>
+					<thead>
+						<tr>
+							<th><span class="asc" id="0">Equation</span></th>
+							<th><span id="2">Attempts</span></th>
+							<th><span id="3">Errors</span></th>
+							<th><span id="4">Rate</span></th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="modal hidden" id="settingsModal">
+			<div class="settingsContainer">
+				<div class="settings">
+					<div class="ctlGrp">
+						<div>
+							<label for="from">From:</label>
+							<select name="from" id="from">
+								<option value = "1" selected="selected">1</option>
+								<option value = "2">2</option>
+								<option value = "3">3</option>
+								<option value = "4">4</option>
+								<option value = "5">5</option>
+								<option value = "6">6</option>
+								<option value = "7">7</option>
+								<option value = "8">8</option>
+								<option value = "9">9</option>
+							</select>
+							<!-- <input name="from" id="from" type="number" min="1" max="9" value="1" onfocus="this.select()" /> -->
+						</div>
+						<div>
+							<label for="to">To:</label>
+							<select name="to" id="to">
+								<option value = "1">1</option>
+								<option value = "2">2</option>
+								<option value = "3">3</option>
+								<option value = "4">4</option>
+								<option value = "5">5</option>
+								<option value = "6">6</option>
+								<option value = "7">7</option>
+								<option value = "8">8</option>
+								<option value = "9" selected="selected">9</option>
+							</select>
+							<!-- <input name="to" id="to" type="number" min="1" max="9" value="9" onfocus="this.select()" /> -->
+						</div>
+					</div>
+					<div class="ctlGrp">
+						<div class="randomContainer">
+							<div class="chkGrp">
+								<input name="random" id="random" type="checkbox" checked />
+								<label for="random">Random</label>
+							</div>
+						</div>
+						<div class="randomContainer">
+							<div class="chkGrp">
+								<input name="sound" id="sound" type="checkbox" checked />
+								<label for="sound">Sound Effects</label>
+							</div>
+						</div>
+					</div>
+					<div class="btnGrp">
+						<div id="settingsCancel">Cancel</div>
+						<div id="settingsUpdate">Update</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="outer">
+			<div class="gearContainer">
+				<div id="settingsBtn"></div>
+				<div id="viewStatistics">View Statistics</div>
+			</div>
+			<div class="header">Learn Your Times Tables!</div>
+			<div  class="container">
+				<div class="intro">
+					You're set to do tables 1 thru 9 randomly.
+				</div>
+				<div class="equation hidden">
+					<div id="question">3 x 4 =</div>
+					<!-- <input id="product" type="number" step = "1"  value = "" /> -->
+					<div class="fakeInput">
+						<div class="blinking" id="inputContent">&nbsp;</div>
+					</div>
+				</div>
+				<div id="next">Start</div>
+				<div class="keyboard hidden">
+					<div class="key" id="1">1</div>
+					<div class="key" id="2">2</div>
+					<div class="key" id="3">3</div>
+					<div class="key" id="4">4</div>
+					<div class="key" id="5">5</div>
+					<div class="key" id="6">6</div>
+					<div class="key" id="7">7</div>
+					<div class="key" id="8">8</div>
+					<div class="key" id="9">9</div>
+					<div class="key" id="go">GO</div>
+					<div class="key" id="0">0</div>
+					<div class="key" id="bksp">&lt;&lt;</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
